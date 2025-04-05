@@ -47,10 +47,11 @@ const CodeAccordian = ({
 	return (
 		<div
 			style={{
-				borderRadius: 3,
+				borderRadius: "var(--radius-sm)",
 				backgroundColor: CODE_BLOCK_BG_COLOR,
 				overflow: "hidden", // This ensures the inner scrollable area doesn't overflow the rounded corners
-				border: "1px solid var(--vscode-editorGroup-border)",
+				border: "1px solid color-mix(in srgb, var(--vscode-editorGroup-border) 80%, transparent)",
+				fontSize: "var(--text-base)",
 			}}>
 			{(path || isFeedback || isConsoleLogs) && (
 				<div

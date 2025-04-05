@@ -174,8 +174,8 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
 				ref={menuRef}
 				style={{
 					backgroundColor: "var(--vscode-dropdown-background)",
-					border: "1px solid var(--vscode-editorGroup-border)",
-					borderRadius: "3px",
+					border: "1px solid color-mix(in srgb, var(--vscode-editorGroup-border) 80%, transparent)",
+					borderRadius: "var(--radius-sm)",
 					boxShadow: "0 4px 10px rgba(0, 0, 0, 0.25)",
 					zIndex: 1000,
 					display: "flex",
@@ -192,7 +192,8 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
 								padding: "8px 12px",
 								cursor: isOptionSelectable(option) ? "pointer" : "default",
 								color: "var(--vscode-dropdown-foreground)",
-								borderBottom: "1px solid var(--vscode-editorGroup-border)",
+								borderBottom:
+									"1px solid color-mix(in srgb, var(--vscode-editorGroup-border) 80%, transparent)",
 								display: "flex",
 								alignItems: "center",
 								justifyContent: "space-between",

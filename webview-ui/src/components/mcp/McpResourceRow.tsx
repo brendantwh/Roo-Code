@@ -25,7 +25,7 @@ const McpResourceRow = ({ item }: McpResourceRowProps) => {
 			</div>
 			<div
 				style={{
-					fontSize: "12px",
+					fontSize: "var(--text-sm)",
 					opacity: 0.8,
 					margin: "4px 0",
 				}}>
@@ -39,7 +39,7 @@ const McpResourceRow = ({ item }: McpResourceRowProps) => {
 			</div>
 			<div
 				style={{
-					fontSize: "12px",
+					fontSize: "var(--text-sm)",
 				}}>
 				<span style={{ opacity: 0.8 }}>Returns </span>
 				<code
@@ -47,7 +47,7 @@ const McpResourceRow = ({ item }: McpResourceRowProps) => {
 						color: "var(--vscode-textPreformat-foreground)",
 						background: "var(--vscode-textPreformat-background)",
 						padding: "1px 4px",
-						borderRadius: "3px",
+						borderRadius: "var(--radius-sm)",
 					}}>
 					{item.mimeType || "Unknown"}
 				</code>

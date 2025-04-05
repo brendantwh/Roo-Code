@@ -49,7 +49,7 @@ const McpToolRow = ({ tool, serverName, serverSource, alwaysAllowMcp }: McpToolR
 						marginLeft: "0px",
 						marginTop: "4px",
 						opacity: 0.8,
-						fontSize: "12px",
+						fontSize: "var(--text-sm)",
 					}}>
 					{tool.description}
 				</div>
@@ -60,13 +60,18 @@ const McpToolRow = ({ tool, serverName, serverSource, alwaysAllowMcp }: McpToolR
 					<div
 						style={{
 							marginTop: "8px",
-							fontSize: "12px",
+							fontSize: "var(--text-sm)",
 							border: "1px solid color-mix(in srgb, var(--vscode-descriptionForeground) 30%, transparent)",
-							borderRadius: "3px",
+							borderRadius: "var(--radius-sm)",
 							padding: "8px",
 						}}>
 						<div
-							style={{ marginBottom: "4px", opacity: 0.8, fontSize: "11px", textTransform: "uppercase" }}>
+							style={{
+								marginBottom: "4px",
+								opacity: 0.8,
+								fontSize: "var(--text-sm)",
+								textTransform: "uppercase",
+							}}>
 							{t("mcp:tool.parameters")}
 						</div>
 						{Object.entries(tool.inputSchema.properties as Record<string, any>).map(

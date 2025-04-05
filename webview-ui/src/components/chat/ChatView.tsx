@@ -1196,8 +1196,8 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 					{telemetrySetting === "unset" && <TelemetryBanner />}
 					{showAnnouncement && <Announcement version={version} hideAnnouncement={hideAnnouncement} />}
 					<div style={{ padding: "0 20px", flexShrink: 0 }}>
-						<h2>{t("chat:greeting")}</h2>
-						<p>{t("chat:aboutMe")}</p>
+						<h3>{t("chat:greeting")}</h3>
+						<p className="text-sm">{t("chat:aboutMe")}</p>
 					</div>
 					{taskHistory.length > 0 && <HistoryPreview showHistoryView={showHistoryView} />}
 				</div>
@@ -1374,7 +1374,7 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 
 const ScrollToBottomButton = styled.div`
 	background-color: color-mix(in srgb, var(--vscode-toolbar-hoverBackground) 55%, transparent);
-	border-radius: 3px;
+	border-radius: var(--radius-sm);
 	overflow: hidden;
 	cursor: pointer;
 	display: flex;

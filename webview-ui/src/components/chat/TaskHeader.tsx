@@ -138,7 +138,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 				style={{
 					backgroundColor: "var(--vscode-badge-background)",
 					color: "var(--vscode-badge-foreground)",
-					borderRadius: "3px",
+					borderRadius: "var(--radius-sm)",
 					padding: "9px 10px 9px 14px",
 					display: "flex",
 					flexDirection: "column",
@@ -195,7 +195,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 								color: "var(--vscode-badge-background)",
 								padding: "2px 4px",
 								borderRadius: "500px",
-								fontSize: "11px",
+								fontSize: "var(--text-sm)",
 								fontWeight: 500,
 								display: "inline-block",
 								flexShrink: 0,
@@ -217,7 +217,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 							ref={textContainerRef}
 							style={{
 								marginTop: -2,
-								fontSize: "var(--vscode-font-size)",
+								fontSize: "var(--text-base)",
 								overflowY: isTextExpanded ? "auto" : "hidden",
 								wordBreak: "break-word",
 								overflowWrap: "anywhere",
@@ -257,7 +257,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 										style={{
 											cursor: "pointer",
 											color: "var(--vscode-badge-foreground)",
-											fontSize: "11px",
+											fontSize: "var(--text-sm)",
 											paddingRight: 8,
 											paddingLeft: 4,
 											backgroundColor: "var(--vscode-badge-background)",
@@ -273,7 +273,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 								style={{
 									cursor: "pointer",
 									color: "var(--vscode-badge-foreground)",
-									fontSize: "11px",
+									fontSize: "var(--text-sm)",
 									marginLeft: "auto",
 									textAlign: "right",
 									paddingRight: 8,
@@ -285,21 +285,29 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 
 						{task.images && task.images.length > 0 && <Thumbnails images={task.images} />}
 
-						<div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+						<div className="text-sm" style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
 							<div className="flex justify-between items-center h-[20px]">
 								<div style={{ display: "flex", alignItems: "center", gap: "4px", flexWrap: "wrap" }}>
 									<span style={{ fontWeight: "bold" }}>{t("chat:task.tokens")}</span>
 									<span style={{ display: "flex", alignItems: "center", gap: "3px" }}>
 										<i
 											className="codicon codicon-arrow-up"
-											style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "-2px" }}
+											style={{
+												fontSize: "var(--text-base)",
+												fontWeight: "bold",
+												marginBottom: "-2px",
+											}}
 										/>
 										{formatLargeNumber(tokensIn || 0)}
 									</span>
 									<span style={{ display: "flex", alignItems: "center", gap: "3px" }}>
 										<i
 											className="codicon codicon-arrow-down"
-											style={{ fontSize: "12px", fontWeight: "bold", marginBottom: "-2px" }}
+											style={{
+												fontSize: "var(--text-base)",
+												fontWeight: "bold",
+												marginBottom: "-2px",
+											}}
 										/>
 										{formatLargeNumber(tokensOut || 0)}
 									</span>
@@ -324,14 +332,14 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 									<span className="flex items-center gap-1">
 										<i
 											className="codicon codicon-database"
-											style={{ fontSize: "12px", fontWeight: "bold" }}
+											style={{ fontSize: "var(--text-base)", fontWeight: "bold" }}
 										/>
 										+{formatLargeNumber(cacheWrites || 0)}
 									</span>
 									<span className="flex items-center gap-1">
 										<i
 											className="codicon codicon-arrow-right"
-											style={{ fontSize: "12px", fontWeight: "bold" }}
+											style={{ fontSize: "var(--text-base)", fontWeight: "bold" }}
 										/>
 										{formatLargeNumber(cacheReads || 0)}
 									</span>

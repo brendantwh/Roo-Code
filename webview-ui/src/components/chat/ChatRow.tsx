@@ -235,6 +235,7 @@ export const ChatRowContent = ({
 		alignItems: "center",
 		gap: "10px",
 		marginBottom: "10px",
+		fontSize: "var(--text-sm)",
 	}
 
 	const pStyle: React.CSSProperties = {
@@ -242,6 +243,7 @@ export const ChatRowContent = ({
 		whiteSpace: "pre-wrap",
 		wordBreak: "break-word",
 		overflowWrap: "anywhere",
+		fontSize: "var(--text-base)",
 	}
 
 	const tool = useMemo(() => {
@@ -325,10 +327,10 @@ export const ChatRowContent = ({
 						/> */}
 						<div
 							style={{
-								borderRadius: 3,
+								borderRadius: "var(--radius-sm)",
 								backgroundColor: CODE_BLOCK_BG_COLOR,
 								overflow: "hidden",
-								border: "1px solid var(--vscode-editorGroup-border)",
+								border: "1px solid color-mix(in srgb, var(--vscode-editorGroup-border) 80%, transparent)",
 							}}>
 							<div
 								style={{
@@ -618,9 +620,9 @@ export const ChatRowContent = ({
 														"color-mix(in srgb, var(--vscode-errorForeground) 20%, transparent)",
 													color: "var(--vscode-editor-foreground)",
 													padding: "6px 8px",
-													borderRadius: "3px",
+													borderRadius: "var(--radius-sm)",
 													margin: "10px 0 0 0",
-													fontSize: "12px",
+													fontSize: "var(--text-sm)",
 												}}>
 												<i
 													className="codicon codicon-warning"
@@ -670,12 +672,13 @@ export const ChatRowContent = ({
 							style={{
 								backgroundColor: "var(--vscode-badge-background)",
 								color: "var(--vscode-badge-foreground)",
-								borderRadius: "3px",
+								borderRadius: "var(--radius-sm)",
 								padding: "9px",
 								overflow: "hidden",
 								whiteSpace: "pre-wrap",
 								wordBreak: "break-word",
 								overflowWrap: "anywhere",
+								fontSize: "var(--text-base)",
 							}}>
 							<div
 								style={{
@@ -801,7 +804,7 @@ export const ChatRowContent = ({
 									style={{
 										marginBottom: "4px",
 										opacity: 0.8,
-										fontSize: "12px",
+										fontSize: "var(--text-sm)",
 										textTransform: "uppercase",
 									}}>
 									{t("chat:response")}
@@ -894,8 +897,8 @@ export const ChatRowContent = ({
 							/> */}
 							<div
 								style={{
-									borderRadius: 3,
-									border: "1px solid var(--vscode-editorGroup-border)",
+									borderRadius: "var(--radius-sm)",
+									border: "1px solid color-mix(in srgb, var(--vscode-editorGroup-border) 80%, transparent)",
 									overflow: "hidden",
 									backgroundColor: CODE_BLOCK_BG_COLOR,
 								}}>
@@ -936,7 +939,7 @@ export const ChatRowContent = ({
 							<div
 								style={{
 									background: "var(--vscode-textCodeBlock-background)",
-									borderRadius: "3px",
+									borderRadius: "var(--radius-sm)",
 									padding: "8px 10px",
 									marginTop: "8px",
 								}}>
@@ -984,7 +987,7 @@ export const ChatRowContent = ({
 													style={{
 														marginBottom: "4px",
 														opacity: 0.8,
-														fontSize: "12px",
+														fontSize: "var(--text-sm)",
 														textTransform: "uppercase",
 													}}>
 													{t("chat:arguments")}

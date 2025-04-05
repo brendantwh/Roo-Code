@@ -22,7 +22,7 @@ const McpEnabledToggle = () => {
 			</VSCodeCheckbox>
 			<p
 				style={{
-					fontSize: "12px",
+					fontSize: "var(--text-sm)",
 					marginTop: "5px",
 					color: "var(--vscode-descriptionForeground)",
 				}}>

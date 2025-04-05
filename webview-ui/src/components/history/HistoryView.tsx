@@ -4,12 +4,7 @@ import { BatchDeleteTaskDialog } from "./BatchDeleteTaskDialog"
 import prettyBytes from "pretty-bytes"
 import { Virtuoso } from "react-virtuoso"
 
-import {
-	VSCodeTextField,
-	VSCodeRadioGroup,
-	VSCodeRadio,
-	VSCodeCheckbox,
-} from "@vscode/webview-ui-toolkit/react"
+import { VSCodeTextField, VSCodeRadioGroup, VSCodeRadio, VSCodeCheckbox } from "@vscode/webview-ui-toolkit/react"
 
 import { vscode } from "@/utils/vscode"
 import { formatLargeNumber, formatDate } from "@/utils/format"
@@ -249,7 +244,7 @@ const HistoryView = ({ onDone }: HistoryViewProps) => {
 									</div>
 									<div
 										style={{
-											fontSize: "var(--vscode-font-size)",
+											fontSize: "var(--text-base)",
 											color: "var(--vscode-foreground)",
 											display: "-webkit-box",
 											WebkitLineClamp: 3,
@@ -295,7 +290,7 @@ const HistoryView = ({ onDone }: HistoryViewProps) => {
 													<i
 														className="codicon codicon-arrow-up"
 														style={{
-															fontSize: "12px",
+															fontSize: "var(--text-base)",
 															fontWeight: "bold",
 															marginBottom: "-2px",
 														}}
@@ -313,7 +308,7 @@ const HistoryView = ({ onDone }: HistoryViewProps) => {
 													<i
 														className="codicon codicon-arrow-down"
 														style={{
-															fontSize: "12px",
+															fontSize: "var(--text-base)",
 															fontWeight: "bold",
 															marginBottom: "-2px",
 														}}
@@ -356,7 +351,7 @@ const HistoryView = ({ onDone }: HistoryViewProps) => {
 													<i
 														className="codicon codicon-database"
 														style={{
-															fontSize: "12px",
+															fontSize: "var(--text-base)",
 															fontWeight: "bold",
 															marginBottom: "-1px",
 														}}
@@ -374,7 +369,7 @@ const HistoryView = ({ onDone }: HistoryViewProps) => {
 													<i
 														className="codicon codicon-arrow-right"
 														style={{
-															fontSize: "12px",
+															fontSize: "var(--text-base)",
 															fontWeight: "bold",
 															marginBottom: 0,
 														}}

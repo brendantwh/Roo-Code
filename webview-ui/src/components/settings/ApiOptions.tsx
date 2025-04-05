@@ -620,7 +620,7 @@ const ApiOptions = ({
 								<i
 									className="codicon codicon-info text-vscode-descriptionForeground"
 									title={t("settings:providers.enablePromptCachingTitle")}
-									style={{ fontSize: "12px" }}
+									style={{ fontSize: "var(--text-sm)" }}
 								/>
 							</div>
 						</Checkbox>
@@ -920,7 +920,7 @@ const ApiOptions = ({
 								<i
 									className="codicon codicon-info text-vscode-descriptionForeground"
 									title={t("settings:providers.customModel.imageSupport.description")}
-									style={{ fontSize: "12px" }}
+									style={{ fontSize: "var(--text-sm)" }}
 								/>
 							</div>
 							<div className="text-sm text-vscode-descriptionForeground pt-1">
@@ -945,7 +945,7 @@ const ApiOptions = ({
 								<i
 									className="codicon codicon-info text-vscode-descriptionForeground"
 									title={t("settings:providers.customModel.computerUse.description")}
-									style={{ fontSize: "12px" }}
+									style={{ fontSize: "var(--text-sm)" }}
 								/>
 							</div>
 							<div className="text-sm text-vscode-descriptionForeground pt-1">
@@ -970,7 +970,7 @@ const ApiOptions = ({
 								<i
 									className="codicon codicon-info text-vscode-descriptionForeground"
 									title={t("settings:providers.customModel.promptCache.description")}
-									style={{ fontSize: "12px" }}
+									style={{ fontSize: "var(--text-sm)" }}
 								/>
 							</div>
 							<div className="text-sm text-vscode-descriptionForeground pt-1">
@@ -1017,7 +1017,7 @@ const ApiOptions = ({
 									<i
 										className="codicon codicon-info text-vscode-descriptionForeground"
 										title={t("settings:providers.customModel.pricing.input.description")}
-										style={{ fontSize: "12px" }}
+										style={{ fontSize: "var(--text-sm)" }}
 									/>
 								</div>
 							</VSCodeTextField>
@@ -1062,7 +1062,7 @@ const ApiOptions = ({
 									<i
 										className="codicon codicon-info text-vscode-descriptionForeground"
 										title={t("settings:providers.customModel.pricing.output.description")}
-										style={{ fontSize: "12px" }}
+										style={{ fontSize: "var(--text-sm)" }}
 									/>
 								</div>
 							</VSCodeTextField>
@@ -1110,7 +1110,7 @@ const ApiOptions = ({
 												title={t(
 													"settings:providers.customModel.pricing.cacheReads.description",
 												)}
-												style={{ fontSize: "12px" }}
+												style={{ fontSize: "var(--text-sm)" }}
 											/>
 										</div>
 									</VSCodeTextField>
@@ -1155,7 +1155,7 @@ const ApiOptions = ({
 												title={t(
 													"settings:providers.customModel.pricing.cacheWrites.description",
 												)}
-												style={{ fontSize: "12px" }}
+												style={{ fontSize: "var(--text-sm)" }}
 											/>
 										</div>
 									</VSCodeTextField>

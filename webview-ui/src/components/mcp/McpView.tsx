@@ -46,7 +46,7 @@ const McpView = ({ onDone }: McpViewProps) => {
 				<div
 					style={{
 						color: "var(--vscode-foreground)",
-						fontSize: "13px",
+						fontSize: "var(--text-base)",
 						marginBottom: "10px",
 						marginTop: "5px",
 					}}>
@@ -77,7 +77,7 @@ const McpView = ({ onDone }: McpViewProps) => {
 							</VSCodeCheckbox>
 							<p
 								style={{
-									fontSize: "12px",
+									fontSize: "var(--text-sm)",
 									marginTop: "5px",
 									color: "var(--vscode-descriptionForeground)",
 								}}>
@@ -217,7 +217,7 @@ const ServerRow = ({ server, alwaysAllowMcp }: { server: McpServer; alwaysAllowM
 							style={{
 								marginLeft: "8px",
 								padding: "1px 6px",
-								fontSize: "11px",
+								fontSize: "var(--text-sm)",
 								borderRadius: "4px",
 								background: "var(--vscode-badge-background)",
 								color: "var(--vscode-badge-foreground)",
@@ -307,7 +307,7 @@ const ServerRow = ({ server, alwaysAllowMcp }: { server: McpServer; alwaysAllowM
 			{server.error ? (
 				<div
 					style={{
-						fontSize: "13px",
+						fontSize: "var(--text-base)",
 						background: "var(--vscode-textCodeBlock-background)",
 						borderRadius: "0 0 4px 4px",
 						width: "100%",
@@ -338,7 +338,7 @@ const ServerRow = ({ server, alwaysAllowMcp }: { server: McpServer; alwaysAllowM
 						style={{
 							background: "var(--vscode-textCodeBlock-background)",
 							padding: "0 10px 10px 10px",
-							fontSize: "13px",
+							fontSize: "var(--text-base)",
 							borderRadius: "0 0 4px 4px",
 						}}>
 						<VSCodePanels style={{ marginBottom: "10px" }}>
@@ -425,7 +425,7 @@ const ServerRow = ({ server, alwaysAllowMcp }: { server: McpServer; alwaysAllowM
 							</div>
 							<span
 								style={{
-									fontSize: "12px",
+									fontSize: "var(--text-sm)",
 									color: "var(--vscode-descriptionForeground)",
 									display: "block",
 								}}>

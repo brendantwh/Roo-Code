@@ -618,10 +618,10 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 								<div className="font-bold">{t("prompts:tools.title")}</div>
 								{findModeBySlug(mode, customModes) && (
 									<Button
-											variant="ghost"
-											size="icon"
-											onClick={() => setIsToolsEditMode(!isToolsEditMode)}
-											title={
+										variant="ghost"
+										size="icon"
+										onClick={() => setIsToolsEditMode(!isToolsEditMode)}
+										title={
 											isToolsEditMode
 												? t("prompts:tools.doneEditing")
 												: t("prompts:tools.editTools")
@@ -727,7 +727,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 						</div>
 						<div
 							style={{
-								fontSize: "13px",
+								fontSize: "var(--text-base)",
 								color: "var(--vscode-descriptionForeground)",
 								marginBottom: "8px",
 							}}>
@@ -773,7 +773,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 						/>
 						<div
 							style={{
-								fontSize: "12px",
+								fontSize: "var(--text-sm)",
 								color: "var(--vscode-descriptionForeground)",
 								marginTop: "5px",
 							}}>
@@ -983,7 +983,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 											: "var(--vscode-foreground)",
 									cursor: "pointer",
 									opacity: activeSupportTab === type ? 1 : 0.8,
-									borderRadius: "3px",
+									borderRadius: "var(--radius-sm)",
 									fontWeight: "bold",
 								}}>
 								{t(`prompts:supportPrompts.types.${type}.label`)}
@@ -994,7 +994,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 					{/* Support prompt description */}
 					<div
 						style={{
-							fontSize: "13px",
+							fontSize: "var(--text-base)",
 							color: "var(--vscode-descriptionForeground)",
 							margin: "8px 0 16px",
 						}}>
@@ -1040,7 +1040,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 									<div
 										style={{
 											color: "var(--vscode-foreground)",
-											fontSize: "13px",
+											fontSize: "var(--text-base)",
 											marginBottom: "20px",
 											marginTop: "5px",
 										}}></div>
@@ -1051,7 +1051,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 											</div>
 											<div
 												style={{
-													fontSize: "13px",
+													fontSize: "var(--text-base)",
 													color: "var(--vscode-descriptionForeground)",
 												}}>
 												{t("prompts:supportPrompts.enhance.apiConfigDescription")}
@@ -1186,7 +1186,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 								/>
 								<div
 									style={{
-										fontSize: "12px",
+										fontSize: "var(--text-sm)",
 										color: "var(--vscode-descriptionForeground)",
 										marginTop: "4px",
 									}}>
@@ -1214,7 +1214,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 										{t("prompts:createModeDialog.saveLocation.global.label")}
 										<div
 											style={{
-												fontSize: "12px",
+												fontSize: "var(--text-sm)",
 												color: "var(--vscode-descriptionForeground)",
 												marginTop: "2px",
 											}}>
@@ -1236,7 +1236,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 								</div>
 								<div
 									style={{
-										fontSize: "13px",
+										fontSize: "var(--text-base)",
 										color: "var(--vscode-descriptionForeground)",
 										marginBottom: "8px",
 									}}>
@@ -1266,7 +1266,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 								</div>
 								<div
 									style={{
-										fontSize: "13px",
+										fontSize: "var(--text-base)",
 										color: "var(--vscode-descriptionForeground)",
 										marginBottom: "8px",
 									}}>
@@ -1308,7 +1308,7 @@ const PromptsView = ({ onDone }: PromptsViewProps) => {
 								</div>
 								<div
 									style={{
-										fontSize: "13px",
+										fontSize: "var(--text-base)",
 										color: "var(--vscode-descriptionForeground)",
 										marginBottom: "8px",
 									}}>

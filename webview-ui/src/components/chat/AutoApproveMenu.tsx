@@ -218,6 +218,7 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 						style={{
 							color: "var(--vscode-foreground)",
 							flexShrink: 0,
+							fontSize: "var(--text-base)",
 						}}>
 						{t("chat:autoApprove.title")}
 					</span>
@@ -247,19 +248,22 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 						style={{
 							marginBottom: "10px",
 							color: "var(--vscode-descriptionForeground)",
-							fontSize: "12px",
+							fontSize: "var(--text-sm)",
 						}}>
 						<Trans
 							i18nKey="chat:autoApprove.description"
 							components={{
-								settingsLink: <VSCodeLink href="#" onClick={handleOpenSettings} />,
+								settingsLink: <VSCodeLink className="text-sm" href="#" onClick={handleOpenSettings} />,
 							}}
 						/>
 					</div>
 					{actions.map((action) => (
 						<div key={action.id} style={{ margin: "6px 0" }}>
 							<div onClick={(e) => e.stopPropagation()}>
-								<VSCodeCheckbox checked={action.enabled} onChange={actionHandlers[action.id]}>
+								<VSCodeCheckbox
+									className="text-base"
+									checked={action.enabled}
+									onChange={actionHandlers[action.id]}>
 									{action.label}
 								</VSCodeCheckbox>
 							</div>
@@ -267,7 +271,7 @@ const AutoApproveMenu = ({ style }: AutoApproveMenuProps) => {
 								style={{
 									marginLeft: "28px",
 									color: "var(--vscode-descriptionForeground)",
-									fontSize: "12px",
+									fontSize: "var(--text-sm)",
 								}}>
 								{action.description}
 							</div>

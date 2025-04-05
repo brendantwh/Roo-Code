@@ -858,7 +858,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 									"w-full",
 									"text-vscode-input-foreground",
 									"font-vscode-font-family",
-									"text-vscode-editor-font-size",
+									"text-base",
 									"leading-vscode-editor-line-height",
 									textAreaDisabled ? "cursor-not-allowed" : "cursor-text",
 									"py-1.5 px-2",

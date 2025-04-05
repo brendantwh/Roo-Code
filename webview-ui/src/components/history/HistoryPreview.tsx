@@ -26,7 +26,7 @@ const HistoryPreview = ({ showHistoryView }: HistoryPreviewProps) => {
 					{t("history:viewAll")}
 				</Button>
 			</div>
-			{taskHistory.slice(0, 3).map((item) => (
+			{taskHistory.slice(0, 5).map((item) => (
 				<div
 					key={item.id}
 					className="bg-vscode-toolbar-hoverBackground/50 hover:bg-vscode-toolbar-hoverBackground/75 rounded-xs relative overflow-hidden opacity-90 hover:opacity-100 cursor-pointer"
@@ -46,6 +46,7 @@ const HistoryPreview = ({ showHistoryView }: HistoryPreviewProps) => {
 								WebkitBoxOrient: "vertical",
 								wordBreak: "break-word",
 								overflowWrap: "anywhere",
+								fontSize: "var(--text-base)",
 							}}>
 							{item.task}
 						</div>
