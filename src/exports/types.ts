@@ -176,10 +176,11 @@ type ProviderSettings = {
 				cachableFields?: string[] | undefined
 		  } | null)
 		| undefined
-	modelTemperature?: (number | null) | undefined
 	modelMaxTokens?: number | undefined
 	modelMaxThinkingTokens?: number | undefined
 	includeMaxTokens?: boolean | undefined
+	modelTemperature?: (number | null) | undefined
+	reasoningEffort?: ("low" | "medium" | "high") | undefined
 	rateLimitSeconds?: number | undefined
 	fakeAi?: unknown | undefined
 }
@@ -269,6 +270,12 @@ type GlobalSettings = {
 	maxReadFileLine?: number | undefined
 	terminalOutputLineLimit?: number | undefined
 	terminalShellIntegrationTimeout?: number | undefined
+	terminalCommandDelay?: number | undefined
+	terminalPowershellCounter?: boolean | undefined
+	terminalZshClearEolMark?: boolean | undefined
+	terminalZshOhMy?: boolean | undefined
+	terminalZshP10k?: boolean | undefined
+	terminalZdotdir?: boolean | undefined
 	rateLimitSeconds?: number | undefined
 	diffEnabled?: boolean | undefined
 	fuzzyMatchThreshold?: number | undefined
@@ -392,6 +399,7 @@ type ClineMessage = {
 				| "subtask_result"
 				| "checkpoint_saved"
 				| "rooignore_error"
+				| "diff_error"
 		  )
 		| undefined
 	text?: string | undefined
@@ -476,6 +484,7 @@ type RooCodeEvents = {
 							| "subtask_result"
 							| "checkpoint_saved"
 							| "rooignore_error"
+							| "diff_error"
 					  )
 					| undefined
 				text?: string | undefined
