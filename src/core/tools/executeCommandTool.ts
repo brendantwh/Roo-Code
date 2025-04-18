@@ -1,6 +1,5 @@
 import { Cline } from "../Cline"
-import { ToolUse } from "../assistant-message"
-import { AskApproval, HandleError, PushToolResult, RemoveClosingTag } from "./types"
+import { ToolUse, AskApproval, HandleError, PushToolResult, RemoveClosingTag } from "../../shared/tools"
 import { formatResponse } from "../prompts/responses"
 import { unescapeHtmlEntities } from "../../utils/text-normalization"
 
@@ -14,6 +13,7 @@ export async function executeCommandTool(
 ) {
 	let command: string | undefined = block.params.command
 	const customCwd: string | undefined = block.params.cwd
+
 	try {
 		if (block.partial) {
 			await cline.ask("command", removeClosingTag("command", command), block.partial).catch(() => {})
@@ -21,6 +21,7 @@ export async function executeCommandTool(
 		} else {
 			if (!command) {
 				cline.consecutiveMistakeCount++
+				cline.recordToolUsage({ toolName: "execute_command", success: false })
 				pushToolResult(await cline.sayAndCreateMissingParamError("execute_command", "command"))
 				return
 			}
@@ -29,7 +30,6 @@ export async function executeCommandTool(
 			if (ignoredFileAttemptedToAccess) {
 				await cline.say("rooignore_error", ignoredFileAttemptedToAccess)
 				pushToolResult(formatResponse.toolError(formatResponse.rooIgnoreError(ignoredFileAttemptedToAccess)))
-
 				return
 			}
 
@@ -39,14 +39,20 @@ export async function executeCommandTool(
 			cline.consecutiveMistakeCount = 0
 
 			const didApprove = await askApproval("command", command)
+
 			if (!didApprove) {
 				return
 			}
+
 			const [userRejected, result] = await cline.executeCommandTool(command, customCwd)
+
 			if (userRejected) {
 				cline.didRejectTool = true
 			}
+
 			pushToolResult(result)
+			cline.recordToolUsage({ toolName: "execute_command" })
+
 			return
 		}
 	} catch (error) {
